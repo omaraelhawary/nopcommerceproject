@@ -8,9 +8,6 @@ import org.openqa.selenium.support.ui.Select;
 public class Base {
 
     WebDriver driver;
-//    public JavascriptExecutor JavaEx;
-//    public Select select;
-//    public Actions action;
 
     public Base(WebDriver driver) {
         this.driver=driver;

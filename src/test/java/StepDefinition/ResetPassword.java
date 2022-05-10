@@ -21,7 +21,7 @@ public class ResetPassword {
 
     @And("Click on Recover Button")
     public void clickOnRecoverButton() {
-        resetPassword.reoverBtnClick();
+        resetPassword.recoverBtnClick();
     }
 
     @Then("User Able to Reset his Password successfully")

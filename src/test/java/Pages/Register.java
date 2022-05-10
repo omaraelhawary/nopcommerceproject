@@ -6,6 +6,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.Select;
+import org.testng.asserts.SoftAssert;
 
 import java.util.Objects;
 
@@ -13,6 +14,9 @@ public class Register extends Base {
     public Register(WebDriver driver) {
         super(driver);
     }
+    // Register Button
+    @FindBy(className = "ico-register")
+    WebElement registerBtn;
     //Gender
     @FindBy(id = "gender-male")
     WebElement maleGenderRadio;
@@ -26,7 +30,6 @@ public class Register extends Base {
     //Day
     @FindBy(name = "DateOfBirthDay")
     WebElement birthDay;
-
     //Select Day
     public Select getBirthDay() {
         return new Select(birthDay);
@@ -62,7 +65,14 @@ public class Register extends Base {
     //Register button
     @FindBy(id = "register-button")
     public WebElement regBtn;
+    // Success message
+    @FindBy(className = "result")
+    WebElement successMsg;
 
+    // Navigate to Register Page
+    public void clickRegister(){
+        registerBtn.click();
+    }
     //Gender Selection
     public void selectGender(String gender){
         if (Objects.equals(gender, "male")) {
@@ -114,8 +124,12 @@ public class Register extends Base {
 
     //Success Message
     public void successMsg(){
+        SoftAssert soft = new SoftAssert();
         String expectedResult = "Your registration completed";
-        String actualResult = driver.findElement(By.className("result")).getText();
-        Assert.assertTrue("Error Message: Text is Wrong", actualResult.contains(expectedResult));
+        String actualResult = successMsg.getText();
+        soft.assertEquals(actualResult, expectedResult);
+        String actualBannerColor = successMsg.getCssValue("color");
+        String expectedBannerColor = "rgba(76, 177, 124, 1)";
+        soft.assertEquals(actualBannerColor, expectedBannerColor);
     }
 }

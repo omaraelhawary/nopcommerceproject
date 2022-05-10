@@ -11,7 +11,7 @@ public class Register {
     @Given("User Navigates to Register Page")
     public void user_navigates_to_register_page(){
         register = new Pages.Register(Hook.driver);
-        Hook.driver.navigate().to("https://demo.nopcommerce.com/register");
+        register.clickRegister();
     }
 
     @When("^Select Gender \"(.*)\"$")

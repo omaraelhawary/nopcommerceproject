@@ -8,9 +8,9 @@ public class Login {
     Pages.Login login;
 
     @And("User Navigates to Login Page")
-    public void user_navigates_to_register_page(){
+    public void user_navigates_to_login_page(){
         login= new Pages.Login(Hook.driver);
-        Hook.driver.navigate().to("https://demo.nopcommerce.com/login");
+        login.clickLogin();
     }
 
     @When("Enter Email {string} and Enter Password {string}")
@@ -20,7 +20,7 @@ public class Login {
 
     @And("Click on Login Button")
     public void clickOnLoginButton() {
-        login.loginBtn.click();
+        login.loginBtnSubmit.click();
     }
 
     @Then("User Could Login successfully")

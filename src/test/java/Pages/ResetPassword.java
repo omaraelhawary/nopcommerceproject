@@ -1,10 +1,9 @@
 package Pages;
 
-import org.junit.Assert;
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.testng.asserts.SoftAssert;
 
 public class ResetPassword extends Base{
 
@@ -20,7 +19,7 @@ public class ResetPassword extends Base{
     // Recover Button
     @FindBy(className = "password-recovery-button")
     WebElement recoverBtn;
-    // Sucess Message
+    // Success Message
     @FindBy(className = "content")
     WebElement banner;
 
@@ -32,13 +31,14 @@ public class ResetPassword extends Base{
         emailF.sendKeys(uEmail);
     }
 
-    public void reoverBtnClick(){
+    public void recoverBtnClick (){
         recoverBtn.click();
     }
 
     public void resetSuccess(){
+        SoftAssert soft = new SoftAssert();
         String expectedResult = "Email with instructions has been sent to you.";
         String actualResult = banner.getText();
-        Assert.assertTrue("Error Message: Text is Wrong", actualResult.contains(expectedResult));
+        soft.assertTrue(actualResult.contains(expectedResult), "Error Message: Text is Wrong");
     }
 }
