@@ -1,4 +1,4 @@
-@login
+@automate
 Feature: User could log in with valid email and password
 
   Background: user open browser

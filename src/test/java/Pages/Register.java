@@ -14,7 +14,7 @@ public class Register extends Base {
     public Register(WebDriver driver) {
         super(driver);
     }
-    // Register Button
+    // S01_Register Button
     @FindBy(className = "ico-register")
     WebElement registerBtn;
     //Gender
@@ -62,14 +62,14 @@ public class Register extends Base {
     WebElement passwordF;
     @FindBy(id = "ConfirmPassword")
     WebElement passwordCfrm;
-    //Register button
+    //S01_Register button
     @FindBy(id = "register-button")
     public WebElement regBtn;
     // Success message
     @FindBy(className = "result")
     WebElement successMsg;
 
-    // Navigate to Register Page
+    // Navigate to S01_Register Page
     public void clickRegister(){
         registerBtn.click();
     }

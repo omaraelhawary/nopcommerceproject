@@ -1,4 +1,4 @@
-@register
+@automate
 Feature: User could register with valid data
 
   Background: user open browser

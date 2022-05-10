@@ -5,7 +5,7 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
-public class ResetPassword {
+public class S03_ResetPassword {
     Pages.ResetPassword resetPassword;
 
     @Given("User Clicks on Forget Password Button")

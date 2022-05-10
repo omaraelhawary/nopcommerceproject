@@ -1,3 +1,4 @@
+@automate
 Feature: User could reset his/her password successfully
 
   Background: user open browser
