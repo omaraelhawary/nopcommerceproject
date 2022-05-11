@@ -20,7 +20,7 @@ public class ResetPassword extends Base{
     @FindBy(className = "password-recovery-button")
     WebElement recoverBtn;
     // Success Message
-    @FindBy(className = "content")
+    @FindBy(xpath = "//p[@class='content']")
     WebElement banner;
 
     public void forgetBtnClick(){
@@ -39,6 +39,6 @@ public class ResetPassword extends Base{
         SoftAssert soft = new SoftAssert();
         String expectedResult = "Email with instructions has been sent to you.";
         String actualResult = banner.getText();
-        soft.assertTrue(actualResult.contains(expectedResult), "Error Message: Text is Wrong");
+        soft.assertEquals(actualResult, expectedResult);
     }
 }
