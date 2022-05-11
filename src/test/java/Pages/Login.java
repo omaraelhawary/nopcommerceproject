@@ -11,7 +11,7 @@ public class Login extends Base {
     public Login(WebDriver driver) {
         super(driver);
     }
-    // S02_Login Button
+    // Login Button
     @FindBy(className = "ico-login")
     WebElement loginBtn;
     //Email
@@ -25,7 +25,7 @@ public class Login extends Base {
     public
     WebElement loginBtnSubmit;
 
-    // Navigate to S01_Register Page
+    // Navigate to Login Page
     public void clickLogin(){
         loginBtn.click();
     }

@@ -58,4 +58,5 @@ public class S01_Register {
     public void userCouldRegisterSuccessfully() {
         register.successMsg();
     }
+
 }
