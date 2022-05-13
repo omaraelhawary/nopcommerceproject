@@ -21,7 +21,7 @@ public class ProductAddtoCart extends Base{
     @FindBy(id = "add-to-cart-button-4")
     WebElement addToCartBtn;
 
-    // Wishlist Item
+    // Cart Item
     @FindBy(xpath = "//*[@id='flyout-cart']/div/div[2]/div/div[2]/div[1]/a")
     WebElement addToCartItem;
 
@@ -35,7 +35,7 @@ public class ProductAddtoCart extends Base{
         addToCartBtn.click();
     }
 
-    // Item in wishlist
+    // Item in Cart
     public void checkItem(){
         SoftAssert soft = new SoftAssert();
         String expectedItem = "Apple MacBook Pro 13-inch";

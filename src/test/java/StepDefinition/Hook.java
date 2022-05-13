@@ -18,7 +18,6 @@ public class Hook {
         driver = new ChromeDriver();
         driver.navigate().to("https://demo.nopcommerce.com/");
         driver.manage().window().maximize();
-        //wait = new WebDriverWait(driver, Duration.ofSeconds(20));
     }
 
     @After
