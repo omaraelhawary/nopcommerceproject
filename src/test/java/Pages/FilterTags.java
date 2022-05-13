@@ -9,7 +9,6 @@ import org.testng.asserts.SoftAssert;
 public class FilterTags extends Base {
     public FilterTags(WebDriver driver) {
         super(driver);
-        action= new Actions(driver);
     }
     // Cool Tag
     @FindBy(xpath = "//li/a[@href='/cool']")
