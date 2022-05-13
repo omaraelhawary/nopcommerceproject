@@ -6,6 +6,7 @@ import io.cucumber.java.en.When;
 public class S07_FilterColor {
 
     Pages.FilterColor filterColor;
+
     @When("User Navigates to Shoes Category")
     public void navigateSubCat(){
         filterColor = new Pages.FilterColor(Hook.driver);

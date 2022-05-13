@@ -20,6 +20,7 @@ public class FilterColor extends Base {
     // Red Filter
     @FindBy(id = "attribute-option-15")
     WebElement redColor;
+    // Red Item
     @FindBy(xpath = "//h2/a")
     WebElement redItem;
 
