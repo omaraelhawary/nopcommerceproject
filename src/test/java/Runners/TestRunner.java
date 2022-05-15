@@ -9,7 +9,12 @@ import org.junit.runner.RunWith;
 @CucumberOptions(
         features = "src/main/resources/features/",
         glue = "StepDefinition",
-        tags = "@automate"
+        tags = "@automate",
+        plugin = {"pretty",
+                "html:target/cucumber-reports/cucumber-pretty.html",
+                "json:target/cucumber-reports/cucumber-TestReport.json",
+                "rerun:target/cucumber-reports/rerun.txt"
+        }
 )
 public class TestRunner {
 }

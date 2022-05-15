@@ -23,8 +23,9 @@ public class S11_ProductCompare {
     }
 
     @And("Click on Second Product Title")
-    public void clickOnSecondProductTitle() {
+    public void clickOnSecondProductTitle() throws InterruptedException {
         productCompare.navigateToSecondProduct();
+        Thread.sleep(2000);
     }
 
     @And("Click on Add to Compare Button in Second product page")

@@ -45,27 +45,27 @@ public class S12_ProductOrder {
                                 uAddress,
                                 uZipCode,
                                 uPhoneNumber);
-        Thread.sleep(1500);
+        Thread.sleep(2500);
     }
 
 
     @And("Select Ground Transport")
     public void selectGroundTransport() throws InterruptedException {
         productOrder.shipMethod();
-        Thread.sleep(1500);
+        Thread.sleep(2500);
     }
 
     @And("Select Check-Money Order")
     public void selectCheckMoneyOrder() throws InterruptedException {
         productOrder.paymentMehtod();
-        Thread.sleep(1500);
+        Thread.sleep(2500);
     }
 
 
     @And("Confirm Payment Data")
     public void confirmPaymentData() throws InterruptedException {
         productOrder.confirmPayment();
-        Thread.sleep(1500);
+        Thread.sleep(2500);
     }
 
     @And("Confirm Order")

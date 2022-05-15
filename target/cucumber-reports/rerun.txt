@@ -1,0 +1,3 @@
+file:src/main/resources/features/T01_Register.feature:7
+file:src/main/resources/features/T10_ProductAddtoWishlist.feature:6
+file:src/main/resources/features/T09_ProductAddtoCart.feature:6
