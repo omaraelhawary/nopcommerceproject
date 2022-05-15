@@ -8,7 +8,7 @@ Feature: User could register with valid data
     When Select Gender "male"
     And User Enter "Omar" and "ElHawary"
     And Select Birthday Date "25" "February" "1994"
-    And Email Address "omar122233@gmail.com"
+    And Email Address "omar1123@gmail.com"
     And Enter Company name "Udacity"
     And Select Newsletter "UnCheck"
     And Add Password "123123123" and Password Confirm "123123123"

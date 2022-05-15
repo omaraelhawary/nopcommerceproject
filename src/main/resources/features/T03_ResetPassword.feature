@@ -6,6 +6,6 @@ Feature: User could reset his/her password successfully
     And User Clicks on Forget Password Button
 
   Scenario: User could reset his/her password successfully
-    When Enter Email "omar122233@gmail.com"
+    When Enter Email "omar1123@gmail.com"
     And Click on Recover Button
     Then User Able to Reset his Password successfully
