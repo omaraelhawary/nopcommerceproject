@@ -16,6 +16,7 @@ public class S09_ProductAddtoCart {
 
     @And("Click on Add to Cart button in Single product page")
     public void clickOnAddToCartButtonInSingleProductPage() throws InterruptedException {
+        productAddtoCart = new Pages.ProductAddtoCart(Hook.driver);
         productAddtoCart.clickOnAddToCart();
         Thread.sleep(2000);
     }
